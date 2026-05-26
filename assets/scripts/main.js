@@ -122,7 +122,17 @@ function addRecipesToDocument(recipes) {
   let main = document.querySelector('main');
   recipes.forEach((recipe) => {
     let recipeCard = document.createElement('recipe-card');
-    recipeCard.data = recipe;
+    recipeCard.data = {
+      imgSrc:       recipe.image[0],
+      imgAlt:       recipe.name,
+      titleLnk:     recipe.url,
+      titleTxt:     recipe.name,
+      organization: recipe.author[0].name,
+      rating:       Math.round(recipe.aggregateRating.ratingValue),
+      numRatings:   recipe.aggregateRating.reviewCount,
+      lengthTime:   recipe.totalTime,
+      ingredients:  recipe.recipeIngredient.join(', ')
+    };
     main.append(recipeCard);
   });
 }
