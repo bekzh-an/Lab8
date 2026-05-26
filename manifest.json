@@ -2,7 +2,7 @@
   "name": "Lab8",
   "short_name": "Bekzhan Yessengeldy",
   "description": "A Thanksgiving recipe card app",
-  "start_url": "./index.html",
+  "start_url": "/Lab8/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#7b2d8b",
