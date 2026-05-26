@@ -20,7 +20,7 @@ self.addEventListener('install', function (event) {
   );
 });
 
-// Activates the service worker.
+// Activates the service worker
 self.addEventListener('activate', function (event) {
   event.waitUntil(self.clients.claim());
 });
